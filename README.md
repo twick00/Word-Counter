@@ -20,7 +20,7 @@ A web app, built with C#, that counts the number of words that are repeated in a
 
 ### Install .NET
 
-## Clone this repository
+### Clone this repository
 
 ### In your preferred shell, navigate to the `~/Word-Counter.Solution/Word-Counter` folder and run the following commands
 
@@ -30,8 +30,8 @@ A web app, built with C#, that counts the number of words that are repeated in a
 
 `$ dotnet run`
 
-#### Navigate to localhost:5000 in your preferred browser
+### Navigate to localhost:5000 in your preferred browser
 
-### License
+## License
 
-#### This project is distributed under the MIT License
+### This project is distributed under the MIT License
