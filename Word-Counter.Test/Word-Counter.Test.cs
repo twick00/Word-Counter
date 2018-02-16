@@ -6,7 +6,7 @@ namespace Word_Counter.Test
     [TestClass]
     public class WordCountTest
     {
-        WordCounter wordCount = new WordCounter{};
+        RepeatCounter wordCount = new RepeatCounter{};
 
         [TestMethod]
         public void CountWord_CountWordThe_True()
