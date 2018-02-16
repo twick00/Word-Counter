@@ -4,19 +4,35 @@ namespace Word_Counter.Models
 {
     public class RepeatCounter
     {
-        public int CountWord(string userSentence, string countThis)
+        private int _wordCount;
+        private string _userSentence;
+        private string _userWord;
+        public int GetWordCount()
         {
-            int countNum = 0;
+            return _wordCount;
+        }
+        public string GetSentence()
+        {
+            return _userSentence;
+        }
+        public string GetWord()
+        {
+            return _userWord;
+        }
+        public RepeatCounter(string userSentence, string userWord)
+        {
+            _wordCount = 0;
+            _userSentence = userSentence;
+            _userWord = userWord;
             string[] splitSentence = userSentence.Split(' ');
             foreach(var word in splitSentence)
             {
                 string newString = word.Trim(new Char[] {'.','?','!'}).ToLower();
-                if (countThis == newString)
+                if (userWord.ToLower() == newString)
                 {
-                    countNum++;
+                    _wordCount++;
                 }
             }
-            return countNum;
         }
     }
 }

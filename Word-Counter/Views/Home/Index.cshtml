@@ -1,3 +1,37 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+
+<div class="container">
+    <div class="row">
+        <form action="/" method="POST">
+            <div class="form-group sentence-input">
+                <label for="userInputSentence">Enter a sentence</label>
+                <input type="text" class="form-control" id="userInputSentence" name="userInputSentence" placeholder="Enter a sentence.">
+            </div>
+            <div class="form-group word-input">
+                <label for="userInputWord">Enter a word</label>
+                <input type="text" class="form-control" id="userInputWord" name="userInputWord" placeholder="Enter a word.">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>
+
+@if (Model != null)
+{
+    <div class="container">
+        <div class="row">
+            @if (Model.GetWordCount() == 1)
+            {
+                <h2>@Model.GetWord() occurs 1 time in the sentence.</h2>
+            } else if (Model.GetWordCount() > 1)
+            {
+                <h2>@Model.GetWord() occurs @Model.GetWordCount() times in the sentence.</h2>
+            } else if (Model.GetWordCount() == 0)
+            {
+                <h2>@Model.GetWord() does not occur in the sentence.</h2>
+            }
+        </div>
+    </div>
+}
